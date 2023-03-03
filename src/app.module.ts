@@ -8,7 +8,7 @@ import { join } from 'path';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, 'static'),
+      rootPath: join(__dirname, '../static'),
     }),
     MongooseModule.forRoot(
       'mongodb+srv://admin:admin@cluster0.ntviphg.mongodb.net/?retryWrites=true&w=majority',
