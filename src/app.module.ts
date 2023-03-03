@@ -3,12 +3,12 @@ import { TrackModule } from './track/track.module';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FileModule } from './file/file.module';
 import { ServeStaticModule } from '@nestjs/serve-static';
-import * as path from 'path';
+import { join } from 'path';
 
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: path.resolve(__dirname, 'file/.../static'),
+      rootPath: join(__dirname, 'static'),
     }),
     MongooseModule.forRoot(
       'mongodb+srv://admin:admin@cluster0.ntviphg.mongodb.net/?retryWrites=true&w=majority',
